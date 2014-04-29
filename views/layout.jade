@@ -1,0 +1,29 @@
+doctype html
+html
+  head
+    title= title
+    style.
+      body {
+        padding: 50px;
+        font: 16px Helvetica, Arial;
+      }
+      .item {
+        overflow: auto;
+        margin-bottom: 10px;
+        position: relative;
+      }
+      .overdue {
+        background-color: #fdd;
+        padding: 5px;
+      }
+      h2 {
+        margin: 5px 0;
+      }
+      .tools {
+        position: absolute;
+        top: 5px; right: 5px;
+      }
+  body
+    h1= title
+    block content
+

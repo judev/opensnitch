@@ -1,0 +1,15 @@
+
+extends layout
+
+block content
+    a(href="/i/add") Add
+    for item in items
+        div(class=item.overdue()?"item overdue":"item")
+            h2 #{item.title()}
+            .tools
+                a(href="/i/" + item.id() + "/edit") Edit
+            p Update expected every #{item.frequency()}. Last seen #{item.lastUpdateDate().toISOString().replace(/(T|\.[0-9]+Z$)/g, ' ')}
+            pre
+                code curl -sS #{urlPrefix}#{item.getTrackingUrl()}
+
+

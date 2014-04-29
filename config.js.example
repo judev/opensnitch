@@ -1,0 +1,23 @@
+
+module.exports = {
+
+  // webapp admin user and password
+  auth: {
+    user: 'admin',
+    pass: 'changeme',
+  },
+
+  // how often should repeated failure alerts be re-sent?
+  alert_repeat_frequency: 24 * 60 * 60,
+
+  // alerts are sent here unless the alert has a specific contact
+  default_contact: 'alerts@example.com',
+
+  // alert email config
+  email: {
+    server: {host: 'localhost'},
+    from: 'opensnitch@example.com',
+  },
+
+};
+

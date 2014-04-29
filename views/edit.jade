@@ -1,0 +1,21 @@
+
+extends layout
+
+block content
+    form(method="post", action=url)
+        .fm-field
+            label(for="title") Label:
+            input#title(name="title", type="text", value=item.title)
+        .fm-field
+            label(for="freq") Frequency:
+            select#freq(name="freq")
+                for freq, label in frequencies
+                    option(selected=freq == item.freq, value=freq) #{label}
+        .fm-field
+            label(for="contact") Contact:
+            input#contact(name="contact", type="text", value=item.contact, placeholder=default_contact)
+        .fm-footer
+            button(type="submit", name="savebutton") Save
+            button(type="submit", name="deletebutton" value="1") Delete
+
+
