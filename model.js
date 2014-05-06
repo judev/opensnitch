@@ -18,6 +18,7 @@ var Item = function(redis, info) {
   this.redis = redis;
   this.info = info;
   this.info.ts = intval(this.info.ts);
+  this.info.alert_ts = intval(this.info.alert_ts);
 };
 
 Item.prototype.id = function() {
