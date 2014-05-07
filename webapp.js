@@ -1,13 +1,13 @@
 
 var express = require('express')
-, log = require('./log')
+  , log = require('./log')
 ;
 
 module.exports = {
 
   app: function(config, model, redisClient) {
 
-    app = express();
+    var app = express();
 
     app.use(express.bodyParser());
 

@@ -39,11 +39,11 @@ Item.prototype.overdue = function() {
 
 Item.prototype.shouldAlert = function() {
   if (this.info.ts > 0 && Date.now() > intval(this.info.ts) + (this.info.freq * 1000 * 1.25)) {
-		if (intval(this.info.alert_ts) === 0 || Date.now() > this.info.alert_ts + (Item.alert_repeat_frequency * 1000)) {
-			return true;
-		}
-	}
-	return false;
+    if (intval(this.info.alert_ts) === 0 || Date.now() > this.info.alert_ts + (Item.alert_repeat_frequency * 1000)) {
+      return true;
+    }
+  }
+  return false;
 };
 
 Item.prototype.alerted = function() {
@@ -175,13 +175,13 @@ Item.frequencies = {
 Item.alert_repeat_frequency = 24 * 60 * 60;
 
 module.exports = {
-	Item: Item,
-	configure: function(config) {
-		if (config.alert_repeat_frequency) {
-			Item.alert_repeat_frequency = config.alert_repeat_frequency;
-		}
-		return module.exports;
-	},
+  Item: Item,
+  configure: function(config) {
+    if (config.alert_repeat_frequency) {
+      Item.alert_repeat_frequency = config.alert_repeat_frequency;
+    }
+    return module.exports;
+  },
 };
 
 
