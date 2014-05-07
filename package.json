@@ -1,12 +1,8 @@
 {
   "name": "opensnitch",
+  "version": "0.1.1",
   "description": "Alert if things don't happen within expected timeframes",
-  "author": "judev@cuttlefish.com",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/judev/opensnitch.git"
-  },
-  "version": "0.1.0",
+  "main": "./opensnitch.js",
   "dependencies": {
     "express": "3.x",
     "emailjs": ">=0.3.0",
@@ -17,6 +13,21 @@
     "hiredis": "*",
     "redis": "*"
   },
+  "devDependencies": {
+    "tape": "2.x"
+  },
+  "scripts": {
+    "test": "tape ./test/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/judev/opensnitch.git"
+  },
+  "author": {
+    "name": "Jude Venn",
+    "email": "judev@cuttlefish.com"
+  },
+  "license": "MIT",
   "engine": {
     "node" : ">=0.8"
   }
